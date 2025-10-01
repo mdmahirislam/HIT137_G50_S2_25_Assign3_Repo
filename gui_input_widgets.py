@@ -24,6 +24,32 @@ class UserInputWidget:
             text="User Input Section",
             padding=10
         )
-        
+        # add radio buttons
+        self.add_radio_buttons()
         # frame is ready to use
         return self.input_frame
+    
+    def add_radio_buttons(self):
+        # create a row for radio buttons
+        button_row = ttk.Frame(self.input_frame)
+        button_row.pack(fill='x', pady=5)
+        
+        # text radio button
+        text_btn = ttk.Radiobutton(
+            button_row,
+            text='Text',
+            variable=self.choice,
+            value='text'
+        )
+        text_btn.pack(side='left', padx=5)
+        
+        # image radio button  
+        img_btn = ttk.Radiobutton(
+            button_row,
+            text='Image',
+            variable=self.choice,
+            value='image'
+        )
+        img_btn.pack(side='left', padx=5)
+        
+    
