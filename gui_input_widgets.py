@@ -52,4 +52,19 @@ class UserInputWidget:
         )
         img_btn.pack(side='left', padx=5)
         
+        # attach file button
+        browse_btn = ttk.Button(
+            button_row,
+            text='Attach a File',
+            command=self.handle_browse
+        )
+        browse_btn.pack(side='left', padx=10)
+    
+    def handle_browse(self):
+        # placeholder for now
+        print("Browse button clicked")
+
+        
+        
+
     
