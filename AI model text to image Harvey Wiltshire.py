@@ -1,8 +1,7 @@
-from diffusers import StableDiffusionPipeline
-import torch
-model_id = "stable-diffusion-v1-5/stable-diffusion-v1-5"
+from transformers import CLIPTextModel, CLIPTokenizer #This is not directly used but is used in the background for the diffusers library
+from diffusers import DiffusionPipeline
 
-pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+pipe = DiffusionPipeline.from_pretrained("prompthero/openjourney")
 pipe = pipe.to("cuda")
 
 class prompt:
