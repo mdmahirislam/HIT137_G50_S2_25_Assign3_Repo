@@ -26,6 +26,10 @@ class UserInputWidget:
         )
         # add radio buttons
         self.add_radio_buttons()
+        
+        # add text box
+        self.add_text_input()
+        
         # frame is ready to use
         return self.input_frame
     
@@ -63,6 +67,21 @@ class UserInputWidget:
     def handle_browse(self):
         # placeholder for now
         print("Browse button clicked")
+    
+    def add_text_input(self):
+        # need scrolledtext for bigger text box
+        from tkinter import scrolledtext
+        
+        # make the text box where user types
+        self.text_area = scrolledtext.ScrolledText(
+            self.input_frame,
+            height=4,
+            width=30,
+            wrap='word'
+        )
+        self.text_area.pack(pady=10, anchor="w")
+        
+        
 
         
         
