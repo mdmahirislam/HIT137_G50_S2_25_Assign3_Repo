@@ -1,0 +1,16 @@
+You need to install transformers and torch in the terminal or cmd using 
+pip install transformers
+pip install pytorch
+
+Instructions
+Select text or image depending on the ai you wish to use.(text to image and image to text respectively)
+
+Press browse to select an image for the image to text generator or type the prompt in the text box for text to image generator
+
+Press run model and wait for the output to generate
+
+If you wish to use again you can either clear the input box to use the same model or switch models and use the other (it auto clears the input box)
+
+To exit safely press options and exit
+
+Thank you🙂
